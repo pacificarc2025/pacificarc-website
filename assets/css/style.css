@@ -79,7 +79,8 @@ header nav ul a:hover {
 
 /* Main Content Sections */
 .hero {
-    background: url('assets/images/solar-panels-bg.jpg') no-repeat center center/cover;
+/* Updated background image file name */
+     background: url('../images/solar-panels-bg.jpg') no-repeat center center/cover;
     color: #fff;
     height: 60vh;
     display: flex;
