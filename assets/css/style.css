@@ -220,6 +220,6 @@ footer {
 }
 
 .visitor-counter {
-vertical-align: middle; /* Align the image vertically with the text /
-margin-left: 5px; / Add a little space between the text and the counter */
+    vertical-align: middle;
+    margin-left: 5px;
 }
