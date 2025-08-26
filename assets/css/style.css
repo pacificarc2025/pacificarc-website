@@ -33,6 +33,10 @@ header {
     color: var(--dark-color);
     padding: 1rem 0;
     border-bottom: 3px solid var(--primary-color);
+    /* New: Makes the header sticky at the top */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
@@ -44,8 +48,11 @@ header .logo {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    /* New: Reduced the gap by changing the justify-content property */
+    justify-content: flex-start;
     align-items: center;
+    /* New: Add a gap between the logo and the menu */
+    gap: 40px;
 }
 
 header nav ul {
@@ -70,13 +77,15 @@ header nav ul a:hover {
 
 /* Main Content Sections */
 .hero {
-    background: url('../images/solar-panels-bg.jpg') no-repeat center center/cover;
+    background: url('assets/images/image_f1ee9d.jpg') no-repeat center center/cover;
     color: #fff;
     height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* To make sure content is visible below the sticky header */
+    padding-top: 5rem;
 }
 
 .hero h1 {
@@ -186,36 +195,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* New CSS for Contact Form and Location Map */
-.contact-form-section {
-    background: var(--light-color);
-    padding: 4rem 0;
+.visitor-counter {
+    vertical-align: middle;
+    margin-left: 5px;
 }
-
-.contact-form-section h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-}
-
-.location-map {
-    margin-top: 4rem;
-}
-
-.map-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-}
-
-.map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
