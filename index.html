@@ -54,10 +54,26 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Pacific Arc. All Rights Reserved.</p>
-            <p>Visitors: 
-                <img src="https://img.shields.io/badge/dynamic/json?color=green&label=visitors&query=value&url=https%3A%2F%2Fcounter.dev%2Fapi%2Fv1%2Fd0cf04fb-b2ad-47c2-8eeb-820d40aac763%2Fcount" alt="Visitor Counter Badge">
-            </p>
+            <p>Visitors: <span id="visitor-count"></span></p>
         </div>
     </footer>
+
+    <script>
+        async function fetchVisitorCount() {
+            const dataId = "d0cf04fb-b2ad-47c2-8eeb-820d40aac763"; // Your unique ID
+            const url = `https://counter.dev/api/v1/${dataId}/count`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                document.getElementById("visitor-count").innerText = data.value;
+            } catch (error) {
+                console.error('Error fetching visitor count:', error);
+                document.getElementById("visitor-count").innerText = "error";
+            }
+        }
+
+        fetchVisitorCount();
+    </script>
 </body>
 </html>
