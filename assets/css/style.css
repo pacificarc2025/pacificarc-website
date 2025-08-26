@@ -218,3 +218,8 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.visitor-counter {
+vertical-align: middle; /* Align the image vertically with the text /
+margin-left: 5px; / Add a little space between the text and the counter */
+}
