@@ -53,23 +53,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Pacific Arc. All Rights Reserved.</p>
-            <p>Visitors1: <span id="visitor-count"></span></p>
+            <p>&copy; 2025 Pacific Arc. All Rights Reserved.</p>
+            <p>Visitors: 
+                <img src="https://counter.dev/counter.php?data_id=d0cf04fb-b2ad-47c2-8eeb-820d40aac763&style=white" alt="Visitor Counter" class="visitor-counter">
+            </p>
         </div>
     </footer>
-
-    <script>
-        // Your unique data-id from counter.dev
-        const dataId = "d0cf04fb-b2ad-47c2-8eeb-820d40aac763";
-
-        // Fetch the count from the counter.dev API
-        fetch(`https://counter.dev/api/v1/${dataId}/count`)
-            .then(response => response.json())
-            .then(data => {
-                // Update the text of the span element with the visitor count
-                document.getElementById("visitor-count").innerText = data.value;
-            })
-            .catch(error => console.error('Error fetching visitor count:', error));
-    </script>
 </body>
 </html>
